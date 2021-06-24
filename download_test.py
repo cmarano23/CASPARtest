@@ -9,11 +9,11 @@ urllib.request.urlretrieve(url, '/Users/carsonmarano/Desktop/SURF2021/Code/CASPA
 
 #Function to add, commit, and push to git
 def uploadToGit():
-	#message = "Automated update " + str(datetime.datetime.now())
+	message = "Automated update " + str(datetime.datetime.now())
 	#os.system("cd ~/Desktop/SURF2021/Code/CASPARtest")
 	os.system("git fetch")
 	os.system("git add " + "testCASPAR.csv")
-	os.system("git commit -m 'Initial commit'")
+	os.system("git commit -m " + "'" + message +"'")
 	os.system("git push")
 
 uploadToGit()
