@@ -1,3 +1,5 @@
+#Note: This is version 1 of this test code. This will only work on Carson's machine at the moment.
+
 #Imports
 import urllib.request
 import os
@@ -12,7 +14,8 @@ urllib.request.urlretrieve(url_xlsx, '/Users/carsonmarano/Desktop/SURF2021/Code/
 
 #Function to add, commit, and push to git
 def uploadToGit():
-	'''This function simply adds, commits, and pushes any updated information to GitHub.'''
+	'''This function simply adds, commits, and pushes any updated information to GitHub. In order to work correctly,
+	the user must ssh to their GitHub account and be in the local GitHub repo folder on your machine.'''
 	message = "Automated update " + str(datetime.datetime.now())
 	os.system("git fetch")
 	os.system("git add " + "testCASPAR.csv")
